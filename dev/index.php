@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Development</title>
-    <meta http-equiv="refresh" content="0; url=http://rkp.intecelektro.de/dev/login.php" />
+    <meta http-equiv="refresh" content="0; url=login.php" />
 </head>
 <body>
 

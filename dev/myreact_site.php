@@ -16,7 +16,9 @@
 <script type="text/babel">
     class App extends React.Component {
         render() {
-            return <h1>Hello world!</h1>
+            return (
+            <h1>Hello From React!</h1>
+            );
         }
     }
 
