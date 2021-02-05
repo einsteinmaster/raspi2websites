@@ -6,7 +6,7 @@
     require 'data.php';
     $val_key_user = $_GET["key"];
     if ($val_key_user == $loginkey) {
-        echo '<meta http-equiv="refresh" content="0; url=http://raspi2.lan/dev/overview.php?key=ichbindeveloper">';
+        echo '<meta http-equiv="refresh" content="0; url=http://rkp.intecelektro.de/dev/overview.php?key=ichbindeveloper">';
     }
     ?>
 </head>
