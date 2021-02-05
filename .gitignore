@@ -1,6 +1,7 @@
 steimkebioladen/data
 rkpsearch/data
 heysteimke/heysteimkewindows
+.idea/
 
 # dependencies
 dev/react-tutorial/node_modules
