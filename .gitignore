@@ -3,6 +3,8 @@ rkpsearch/data
 heysteimke/heysteimkewindows
 .idea/
 
+config.json
+
 # dependencies
 dev/react-tutorial/node_modules
 dev/react-tutorial/.pnp

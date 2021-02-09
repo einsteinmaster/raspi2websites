@@ -1,0 +1,12 @@
+{
+  "entrys": [
+    {
+      "name": "id",
+      "type": "number"
+    },
+    {
+      "name": "name",
+      "type": "text"
+    }
+  ]
+}

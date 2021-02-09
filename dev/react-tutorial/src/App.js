@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import MyTable from "./MyTable";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function Home() {
                 <p>
                     Hallo From React!
                 </p>
+                <MyTable/>
             </header>
         </div>
     )
