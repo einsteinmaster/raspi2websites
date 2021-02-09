@@ -6,7 +6,8 @@
     require 'data.php';
     $val_key_user = $_GET["key"];
     if ($val_key_user == $loginkey) {
-        echo '<meta http-equiv="refresh" content="0; url=overview.php?key=ichbindeveloper">';
+        setcookie("name",$loginkey);
+        echo '<meta http-equiv="refresh" content="0; url=overview.php">';
     }
     ?>
 </head>

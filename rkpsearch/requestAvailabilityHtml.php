@@ -12,15 +12,16 @@
 
 <div>
 
-<?php 
+<?php
+
+require 'data.php';
 
 if(!is_null($_GET["article"])){
-
 	$article = htmlspecialchars($_GET["article"]);
-	$servername = "10.250.0.10";
-	$username = "apprkp";
-	$password = "c39rBP8XMtu30Nzm";
-	$dbname = "rkparticles";
+	$servername = $rkps_db_server;
+	$username = $rkps_db_username;
+	$password = $rkps_db_password;
+	$dbname = $rkps_db_name;
 
 	try{
 

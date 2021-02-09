@@ -1,13 +1,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Marius Developer Overview</title>
 </head>
 <body style="background-color:black;">
 
 <?php
 require 'data.php';
-if ($_GET["key"] != $loginkey) {
+if ($_COOKIE["name"] != $loginkey) {
     die("permission denied");
 }
 ?>
@@ -24,7 +24,8 @@ if ($_GET["key"] != $loginkey) {
     <a href="../steimkebioladen/index.html">SteimkeBioladen Seite</a><br>
     <a href="myreact_site.php">React Dynamic Site</a><br>
     <a href="react-tutorial/build/index.html">React Static Site</a><br>
-    <a href="getTotal.php?amount=1&price=2">Get Total Test</a>
+    <a href="getTotal.php?amount=1&price=2">Get Total Test</a><br>
+    <a href="getLayout.php?key=lay1">Get Layout File</a>
 </p>
 <p style="color:white">
     PHP User:
