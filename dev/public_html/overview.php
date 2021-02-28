@@ -23,7 +23,7 @@ if ($_COOKIE["name"] != $loginkey) {
     <a href="../rkpsearch/index.html">RKPSearch Seite</a><br>
     <a href="../steimkebioladen/index.html">SteimkeBioladen Seite</a><br>
     <a href="myreact_site.php">React Dynamic Site</a><br>
-    <a href="react-tutorial/build/index.html">React Static Site</a><br>
+    <a href="react/index.html">React Static Site</a><br>
     <a href="getTotal.php?amount=1&price=2">Get Total Test</a><br>
     <a href="getLayout.php?key=lay1">Get Layout File</a>
 </p>

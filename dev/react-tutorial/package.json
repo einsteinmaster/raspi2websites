@@ -1,6 +1,6 @@
 {
   "name": "react-tutorial",
-  "homepage": "/dev/react-tutorial/build/",
+  "homepage": "/dev/react/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

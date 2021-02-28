@@ -25,6 +25,9 @@ try{
             while($row = $result->fetch_assoc()){
                 $data[$row["layout"]][$row["entry"]] = $row["mvalue"];
             }
+
+
+
             $resp->status = 0;
             $resp->message = "Item found in DB";
         } else {
