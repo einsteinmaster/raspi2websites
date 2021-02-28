@@ -22,9 +22,8 @@ services:
       - "8085:80"
   nginx-proxy:
     image: nginx
-    container_name: nginx-proxy
     ports:
       - "80:80"
     volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro   
   
