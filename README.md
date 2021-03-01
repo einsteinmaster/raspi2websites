@@ -39,6 +39,8 @@ Compile Static React Site. Install `react`, `reactdom` and `reactscript` via `np
 
 ### Copy Data
 
+Create Directory `download/`
+
 Copy HeysteimkeWindows ClickOnce Deploy in `download/heysteimkewindows/`.
 
 Copy RKP-Search ClickOnce Deploy in `download/rkpsearch/`.
