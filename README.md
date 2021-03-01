@@ -31,8 +31,9 @@ Basic Structure:
 Create `.env` File with Structure:
 ```
 DB_ROOT_PW=example
+DB_IMAGE=mysql
 ```
-Here you set the MySql Root Password.
+Here you set the MySql Root Password and the Docker Image. If you use AMD64 Host you should set it to `mysql` but for arm use `hypriot/rpi-mysql`. 
 
 Compile Static React Site. Install `react`, `reactdom` and `reactscript` via `npm`. Run `npm run build` in `dev/react-tutorial/`.
 
