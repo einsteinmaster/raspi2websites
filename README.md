@@ -28,7 +28,11 @@ Basic Structure:
   }
 }
 ```
-Change Passwords. Update MySql root password if needed in `docker-compose.yml`.
+Create `.env` File with Structure:
+```
+DB_ROOT_PW=example
+```
+Here you set the MySql Root Password.
 
 Compile Static React Site. Install `react`, `reactdom` and `reactscript` via `npm`. Run `npm run build` in `dev/react-tutorial/`.
 

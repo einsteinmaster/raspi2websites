@@ -4,6 +4,7 @@ heysteimke/heysteimkewindows
 .idea/
 
 config.json
+.env
 
 # dependencies
 dev/react-tutorial/node_modules
