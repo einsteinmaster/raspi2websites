@@ -1,6 +1,10 @@
 <?php
 if($GLOBALS['config'] == null){
-    $config = json_decode(file_get_contents("config.json"));
+	$filecontent = file_get_contents("config.json");
+	if($filecontent == false){
+		die("could not find config.json");
+	}
+    $config = json_decode($filecontent);
     $GLOBALS['config'] = $config;
 }else{
     $config = $GLOBALS['config'];
