@@ -15,6 +15,11 @@ services:
   steimkebioladen:
     build: "steimkebioladen"
     restart: always
+  download:
+    image: httpd
+    restart: always
+    volumes:
+      - "./download/:/usr/local/apache2/htdocs/download/:ro"
   nginx-proxy:
     image: nginx
     restart: always
