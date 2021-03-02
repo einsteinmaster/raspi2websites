@@ -1,2 +1,2 @@
 from httpd
-COPY ./build/ /usr/local/apache2/htdocs/
+COPY ./hsweb/build/ /usr/local/apache2/htdocs/

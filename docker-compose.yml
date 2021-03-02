@@ -20,6 +20,9 @@ services:
     restart: always
     volumes:
       - "./download/:/usr/local/apache2/htdocs/download/:ro"
+  steimkebioladen:
+    build: "hsweb"
+    restart: always
   nginx-proxy:
     image: nginx
     restart: always
