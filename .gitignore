@@ -1,20 +1,17 @@
-steimkebioladen/data
-rkpsearch/data
-heysteimke/heysteimkewindows
 .idea/
 download/
 config.json
 .env
 
-# dependencies
+# react gitignores
+hsweb/hsweb/node_modules
+hsweb/hsweb/.pnp
+hsweb/hsweb/coverage
+hsweb/hsweb/build
+
 dev/react-tutorial/node_modules
 dev/react-tutorial/.pnp
-.pnp.js
-
-# testing
 dev/react-tutorial/coverage
-
-# production
 dev/react-tutorial/build
 
 # misc
@@ -23,7 +20,7 @@ dev/react-tutorial/build
 .env.development.local
 .env.test.local
 .env.production.local
-
+.pnp.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

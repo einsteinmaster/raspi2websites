@@ -35,7 +35,7 @@ DB_IMAGE=mysql
 ```
 Here you set the MySql Root Password and the Docker Image. If you use AMD64 Host you should set it to `mysql` but for arm use `hypriot/rpi-mysql`. 
 
-Compile Static React Site. Install `react`, `reactdom` and `reactscript` via `npm`. Run `npm run build` in `dev/react-tutorial/`.
+Compile Static React Site. Install `react`, `react-dom` and `react-scripts` via `npm`. Run `npm run build` in `dev/react-tutorial/`.
 
 ### Copy Data
 

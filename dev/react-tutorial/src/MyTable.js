@@ -21,13 +21,8 @@ class MyTable extends Component{
     }
     updateEntryAmount(key,amount){
         let ent = this.getEntryByKey(key);
-        console.log('update entry called')
-        console.log(ent)
         ent.amount = amount
-        console.log(ent)
-        console.log(ent.amount)
-        let querystr = 'http://rkp.intecelektro.de/dev/getTotal.php?amount=' + ent.amount + '&price=' + ent.price;
-        console.log(querystr)
+        let querystr = '/dev/getTotal.php?amount=' + ent.amount + '&price=' + ent.price;
         fetch(querystr)
             .then(res => res.json())
             .then(
@@ -39,9 +34,6 @@ class MyTable extends Component{
                     console.log('total is '+ent.total);
                     this.forceUpdate();
                 },
-                // Note: it's important to handle errors here
-                // instead of a catch() block so that we don't swallow
-                // exceptions from actual bugs in components.
                 (error) => {
                     this.setState({
                         isLoaded: true,
@@ -51,17 +43,11 @@ class MyTable extends Component{
             )
     }
     entryChangedHandler(e){
-        console.log("changed val")
-        console.log(e)
-        console.log(e.target.className)
-        console.log(this.getEntryByKey(e.target.className))
         if(e.nativeEvent instanceof InputEvent){
-            console.log(e.nativeEvent.data)
             this.updateEntryAmount(e.target.className,parseInt(e.target.value))
         }
     }
     renderTableData(){
-        console.log("rendered table")
         return this.state.data.map((item)=>
             <tr>
                 <td>{item.name}</td>
