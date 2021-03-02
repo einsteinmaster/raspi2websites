@@ -26,7 +26,7 @@ class MyTable extends Component{
         ent.amount = amount
         console.log(ent)
         console.log(ent.amount)
-        let querystr = 'https://rkp.intecelektro.de/dev/getTotal.php?amount=' + ent.amount + '&price=' + ent.price;
+        let querystr = 'http://rkp.intecelektro.de/dev/getTotal.php?amount=' + ent.amount + '&price=' + ent.price;
         console.log(querystr)
         fetch(querystr)
             .then(res => res.json())
