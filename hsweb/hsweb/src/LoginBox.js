@@ -1,7 +1,7 @@
-function loginClick(e){
-	console.log("button hi");
-}
-function LoginBox() {
+function LoginBox({logInStateChange}) {
+	const loginClick = (e) => {
+		logInStateChange(true);
+	}
 	return (
 		<div className="LoginBox">
 			<form>
