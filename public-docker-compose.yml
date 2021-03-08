@@ -18,11 +18,6 @@ services:
   hsweb:
     image: thebanger/hsweb
     restart: always
-  nginx-proxy:
-    image: thebanger/proxy
-    restart: always
-    ports:
-      - "80:80"
   downloadweb:
     image: httpd
     restart: always
@@ -40,6 +35,23 @@ services:
       - PASV_ADDRESS=127.0.0.1 
       - PASV_MIN_PORT=21100
       - PASV_MAX_PORT=21110
+  nginx-proxy:
+    image: thebanger/proxy
+    restart: always
+    ports:
+      - "80:80"
+  db:
+    image: ${DB_IMAGE}
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PW}
+    volumes:
+      - "dbvol:/var/lib/mysql"
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8083:8080
 volumes:
   dbvol:
   download:
