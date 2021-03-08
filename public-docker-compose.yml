@@ -41,7 +41,7 @@ services:
     ports:
       - "80:80"
   db:
-    image: ${DB_IMAGE}
+    image: mysql
     restart: always
     volumes:
       - "dbvol:/var/lib/mysql"
