@@ -16,7 +16,7 @@ services:
     image: thebanger/web-steimkebioladen
     restart: always
   hsweb:
-    image: thebanger/hsweb
+    image: thebanger/web-hsweb
     restart: always
   downloadweb:
     image: httpd
