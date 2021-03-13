@@ -34,6 +34,10 @@ DB_ROOT_PW=example
 DB_IMAGE=mysql
 NUGET_APIKEY=mypass
 ```
+
+Create `.htpasswd` in proxy folder.
+Do this with console: `htpasswd -c .htpasswd user`.
+
 Here you set the MySql Root Password and the Docker Image. If you use AMD64 Host you should set it to `mysql` but for arm use `hypriot/rpi-mysql`. 
 
 Compile Static React Site. Install `react`, `react-dom` and `react-scripts` via `npm`. Run `npm run build` in `dev/react-tutorial/`.

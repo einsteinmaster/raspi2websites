@@ -2,6 +2,7 @@
 download/
 config.json
 .env
+.htpasswd
 
 # react gitignores
 hsweb/hsweb/node_modules
