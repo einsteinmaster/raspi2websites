@@ -52,6 +52,16 @@ services:
     restart: always
     ports:
       - 8083:8080
+  nuget:
+    image: sunside/simple-nuget-server
+    restart: always
+    environment:
+      NUGET_API_KEY: ${NUGET_APIKEY}
+    volumes:
+      - "nugetpack:/var/www/packagefiles"
+      - "nugetdb:/var/www/db"
 volumes:
   dbvol:
   download:
+  nugetpack:
+  nugetdb:

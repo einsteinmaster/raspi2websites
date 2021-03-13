@@ -32,6 +32,7 @@ Create `.env` File with Structure:
 ```
 DB_ROOT_PW=example
 DB_IMAGE=mysql
+NUGET_APIKEY=mypass
 ```
 Here you set the MySql Root Password and the Docker Image. If you use AMD64 Host you should set it to `mysql` but for arm use `hypriot/rpi-mysql`. 
 
