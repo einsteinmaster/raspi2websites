@@ -40,6 +40,8 @@ services:
     restart: always
     ports:
       - "80:80"
+    environment:
+     - SERVER_HOSTNAME=${SERVER_HOSTNAME}
   db:
     image: ${DB_IMAGE}
     restart: always
@@ -60,8 +62,29 @@ services:
     volumes:
       - "nugetpack:/var/www/packagefiles"
       - "nugetdb:/var/www/db"
+  gitlab:
+    image: "gitlab/gitlab-ee:latest"
+    restart: always
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'https://${SERVER_HOSTNAME}/gitlab'
+        nginx['listen_port'] = 80
+        nginx['listen_https'] = false
+        letsencrypt['enable'] = false
+        nginx['proxy_set_headers'] = {
+          "X-Forwarded-Proto" => "http",
+          "CUSTOM_HEADER" => "VALUE"
+        }
+    volumes:
+      - "gitlabconfig:/etc/gitlab"
+      - "gitlablog:/var/log/gitlab"
+      - "gitlabdata:/var/opt/gitlab"
+
 volumes:
   dbvol:
   download:
   nugetpack:
   nugetdb:
+  gitlabconfig:
+  gitlablog:
+  gitlabdata:
