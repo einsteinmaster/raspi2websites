@@ -36,7 +36,7 @@ services:
       - PASV_MIN_PORT=21100
       - PASV_MAX_PORT=21110
   nginx-proxy:
-    build: "proxy"
+    image: thebanger/proxy
     restart: always
     ports:
       - "80:80"
@@ -65,6 +65,8 @@ services:
   gitlab:
     image: "gitlab/gitlab-ee:latest"
     restart: always
+    ports:
+      - "22000:22"
     environment:
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'https://${SERVER_HOSTNAME}/gitlab'
