@@ -67,6 +67,3 @@ volumes:
   download:
   nugetpack:
   nugetdb:
-  gitlabconfig:
-  gitlablog:
-  gitlabdata:
