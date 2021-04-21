@@ -1,31 +1,32 @@
 import {Component} from "react";
 import './MyTable.css';
-import {api_getData,api_getLayout,api_updateSum} from './restApi';
+import {api_getLayout, api_updateSum} from './restApi';
 
-class MyTable extends Component{
+class DynTable extends Component{
     constructor(props) {
         super(props);
         this.state = {
             layout: api_getLayout(),
-            data: api_getData(),
+            data: [],
             isLoaded: false,
             error: null
         }
+        for(let i=0;i<this.state.layout.length;i++ ){
+            let tableitem = {
+                key:i,
+                name:this.state.layout[i].name,
+                value:"0"
+            }
+            this.state.data.push(tableitem)
+        }
     }
-    getEntryByKey(key){
-        return this.state.data.filter((ent,ind,arr)=>{
-            return ent.key == key
-        })[0]
-    }
-    async updateEntryAmount(key,amount){
-        let ent = this.getEntryByKey(key);
-        ent.amount = amount;
-        let res = await api_updateSum(amount,ent.price)
-        ent.total = res;
+    async updateValue(key,newValue){
+        let ent = this.state.data.find(it => it.key == key);
+        ent.value = newValue;
     }
     async entryChangedHandler(e){
         if(e.nativeEvent instanceof InputEvent){
-            await this.updateEntryAmount(e.target.className,parseInt(e.target.value));
+            await this.updateValue(e.target.className,parseInt(e.target.value));
             this.forceUpdate();
         }
     }
@@ -33,11 +34,11 @@ class MyTable extends Component{
         return this.state.data.map((item)=>
             <tr>
                 <td>{item.name}</td>
-                <td>{item.price}</td>
+                <td>{item.value}</td>
                 <td>
                     <input className={item.key}
                            type="text"
-                           value={item.amount}
+                           value={item.value}
                            onChange={this.entryChangedHandler.bind(this)}
                     />
                 </td>
@@ -48,8 +49,8 @@ class MyTable extends Component{
     render(){
         return (
             <div>
-                <h1 className="title">MyTable</h1>
-                <table className="mytable">
+                <h1 className="TableTitle">DynTable</h1>
+                <table className="DynTable">
                     <tbody>
                     {this.renderTableData()}
                     </tbody>
@@ -59,4 +60,4 @@ class MyTable extends Component{
     }
 }
 
-export default MyTable;
+export default DynTable;

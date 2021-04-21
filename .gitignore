@@ -9,11 +9,13 @@ hsweb/hsweb/node_modules
 hsweb/hsweb/.pnp
 hsweb/hsweb/coverage
 hsweb/hsweb/build
+hsweb/hsweb/package-lock.json
 
 dev/react-tutorial/node_modules
 dev/react-tutorial/.pnp
 dev/react-tutorial/coverage
 dev/react-tutorial/build
+dev/react-tutorial/package-lock.json
 
 # misc
 .DS_Store
